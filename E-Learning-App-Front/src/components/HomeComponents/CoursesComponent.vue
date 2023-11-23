@@ -6,6 +6,9 @@
         <div class="section-heading">
           <h2>Choose Your Course</h2>
         </div>
+        <div class="section-heading">
+          <h2> All this Courses Are free you just need to sign up or sign in</h2>
+        </div>
       </div>
       <swiper
         :slidesPerView="3"
@@ -28,14 +31,12 @@
             <img :src="`${teacher_course.course_img}`" alt="Course #1" />
             <div class="card-content">
               <p>{{ teacher_course.course_description }}</p>
-
               <h3>course by {{ teacher_course.name }}</h3>
-              <p>course Price : {{ teacher_course.course_price }}</p>
-              <button>Pay Now</button>
             </div>
           </div>
         </swiper-slide>
       </swiper>
+     
     </div>
   </div>
 </template>
@@ -65,5 +66,9 @@ onMounted(() => {
 @import url("/assets/css/CardDesign.css");
 .courses {
   background: #172238;
+}
+h2{
+  color: rgb(248, 0, 0) 23, 56;
+  text-align: center;
 }
 </style>

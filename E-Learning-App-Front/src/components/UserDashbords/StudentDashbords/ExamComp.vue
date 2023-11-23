@@ -2,7 +2,7 @@
   <div>
     <h1 style="color: green">Questions</h1>
     <div>
-      <form @submit.prevent="SeeCourseAnsewers(answers, courseId)">
+      <form @submit.prevent="SeeCourseAnsewers(answers,courseId,student_id)">
         <div>
           <div tyle="color:rgb(230, 102, 11)">
             <ul>
@@ -35,11 +35,12 @@
 import { onMounted, ref } from "vue";
 import useCourseApi from "../../../Api/Courses/CourseApi";
 import { useRoute } from "vue-router";
-
+import { useStudentDetailStore } from "../../../stores/student_detail_store";
 const { getCourseQuestions, Questions, SeeCourseAnsewers,ValidationMsg } = useCourseApi();
 const router = useRoute();
 const courseId = router.params.courseId;
-
+const student_Store = useStudentDetailStore();
+const student_id = student_Store.id;
 const Data = getCourseQuestions(courseId);
 const answers = ref([]);
 onMounted(() => {

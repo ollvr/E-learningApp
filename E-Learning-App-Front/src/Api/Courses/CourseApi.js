@@ -18,7 +18,7 @@ export default function useCourseApi() {
   const teacher_store = useTeacherStore()
   const token = store.$state.token
   const certifs = ref(null)
-  const Msg = ref(null)
+  const courseCreatedMsg = ref(null)
   const Register_to_course_msg = ref(null)
   const Course = ref([])
   const Register_course_store = useRegisterToSpecificCourseStore()
@@ -27,6 +27,7 @@ export default function useCourseApi() {
   const CourseLinks = ref([])
   const Questions = ref([])
   const ValidationMsg = ref("")
+  
   // teachers api methods
   const getAllTeachersCourses = async () => {
 
@@ -46,6 +47,9 @@ export default function useCourseApi() {
       headers: {
         Authorization: `Bearer ${teacher_store.token}`
       }
+    }).then((response)=>{
+      console.log("Server Response => ",response.data)
+      courseCreatedMsg.value = response.data.msg;
     })
   }
   // Student Part
@@ -174,12 +178,12 @@ export default function useCourseApi() {
       })
   }
 
-  const SeeCourseAnsewers = async (UserAnsewers,courseId) => {
+  const SeeCourseAnsewers = async (UserAnsewers,courseId,student_id) => {
     let number_of_wrong_ansewers = 0;
     let number_of_correct_ansewers = 0;
 
     axios
-      .post('/SendAnsewers/'+courseId,{UserAnsewers,courseId},{
+      .post('/SendAnsewers/'+courseId,{UserAnsewers,courseId,student_id},{
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -210,7 +214,7 @@ export default function useCourseApi() {
     getStudentCertif,
     certifs,
     addCourse,
-    Msg,
+    courseCreatedMsg,
     Register_to_Course,
     Register_to_course_msg,
     GetCourse,

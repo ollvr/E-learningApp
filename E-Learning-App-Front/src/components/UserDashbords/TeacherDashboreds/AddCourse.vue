@@ -9,8 +9,8 @@
         <button type="submit">Create Course</button>
       </form>
 
-      <div v-if="Msg">
-        <p style="color:green">{{ Msg }}</p>
+      <div v-if="courseCreatedMsg">
+        <p style="color:green">{{ courseCreatedMsg }}</p>
       </div>
 
   </div>
@@ -20,7 +20,7 @@
 import { ref } from "vue";
 import useCourseApi from "../../../Api/Courses/CourseApi";
 import { useTeacherDetailStore } from "../../../stores/teacher_detail_store";
-const {addCourse,Msg} = useCourseApi()
+const {addCourse,courseCreatedMsg} = useCourseApi()
 const teacher_store = useTeacherDetailStore()
 const Course_Data_Form = ref({
     teacher_id:teacher_store.$state.id,

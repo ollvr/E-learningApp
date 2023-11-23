@@ -1,12 +1,4 @@
 <template>
-    <div>
-        <h1 style="color:red;text-align:center">Course Questions work </h1>
-    <div>
-
-        <div>
-
-        </div>
-
         <div class="form-container">
             <h1> {{ course_store.course_name  }} </h1>
             <form @submit.prevent="addQuestionToCourse(formData)">
@@ -21,8 +13,6 @@
                 <label for="course-answers" class="form-label">Course Answers:</label>
                 <textarea id="course-answers" v-model="formData.QuestionAnsewer" class="form-textarea" required></textarea>
 
-
-
                 <button type="submit" class="submit-button">Add Questions </button>
             </form>
         </div>
@@ -30,8 +20,6 @@
            <h3 style="color:blue;text-align:center">{{ MsgQuestionCreations }}</h3>
         </div>
 
-        </div>
-    </div>
 </template>
 
 <script setup>

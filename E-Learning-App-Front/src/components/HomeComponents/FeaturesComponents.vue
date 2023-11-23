@@ -121,13 +121,13 @@ import BestEducation from './FeaturesComponent/BestEducation.vue'
 import QualityMeetings from './FeaturesComponent/QualityMeetings.vue'
 import TopManagment from './FeaturesComponent/TopManagment.vue'
 
-const BestEducationClick = ref(false)
-const QualityMeetingClick = ref(false)
-const TopManagementClick = ref(false)
+const BestEducationClick = ref(true)
+const QualityMeetingClick = ref(true)
+const TopManagementClick = ref(true)
 
-const CourseShowed = ref(false)
-const VirtualClassShowed = ref(false)
-const realMeetingShowed = ref(false)
+const CourseShowed = ref(true)
+const VirtualClassShowed = ref(true)
+const realMeetingShowed = ref(true)
 
 function showCourses() {
   CourseShowed.value = !CourseShowed.value

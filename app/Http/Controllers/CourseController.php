@@ -88,19 +88,24 @@ class CourseController extends Controller
     public function addCourse(Request $request)
     {
         if (Auth::user()->id == $request->user()->id) {
-            Course::create([
+           $image = substr($request->course_img,12);
+           $oldPath = substr($request->course_img,0,13);
+            $newPath = "/assets/images/".$image;
+            $course = Course::create([
                 "teacher_id" => $request->teacher_id,
                 "course_name" => $request->course_name,
                 "course_description" => $request->course_description,
-                "course_img" => "/assets/images/" . $request->course_img,
+                "course_img" => $newPath,
                 "certified" => $request->certified,
                 "VideoLink" => $request->VideoLink
 
             ]);
 
             return response()->json([
-                "msg" => "Course Created Succefully"
+                "msg" => "Course Created Succefully",
+                "sendedImage" => $request->course_img
             ]);
+            
         } else {
             return response()->json([
                 "msg" => "You are Not authorized"
@@ -215,15 +220,20 @@ class CourseController extends Controller
                 $wrongAnsewer ++;
             }
         }
+        $registred_student = StudentRegistration::where("course_id",$courseId)->where("student_id",$request->student_id)->get();
+       
         if($wrongAnsewer == 0){
-            StudentRegistration::where("course_id",$courseId)->where("student_id",$request->student_id)->update([
-                "certified" => "yes"
-            ]);
+          $registred_student[0]->update([
+            "certified" => "yes"
+          ]);
         }
         return response()->json([
             "SendedAnsewers" => $request->UserAnsewers,
             "CorrectAnsewers" => $correctAnsewer,
-            "WrongAnsewer" => $wrongAnsewer
+            "WrongAnsewer" => $wrongAnsewer,
+            "StudentId" => $request->student_id,
+            "CourseId" => $courseId,
+            "RegistredStudent" => $registred_student
         ]);
     }
 }
