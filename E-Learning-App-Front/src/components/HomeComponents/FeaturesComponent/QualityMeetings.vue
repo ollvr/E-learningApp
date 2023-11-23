@@ -8,13 +8,12 @@
         <div class="col-md-6">
           <h4>Quality Meeting</h4>
           <p>
-            You are NOT allowed to redistribute this template ZIP file on any template collection
-            website. However, you can use this template to convert into a specific theme for any
-            kind of CMS platform such as WordPress. For more information, you shall
-            <a rel="nofollow" href="https://templatemo.com/contact" target="_parent"
-              >contact TemplateMo</a
-            >
-            now.
+            Elevate your learning with our e-learning app, where quality meetings are at the forefront.
+             We prioritize meaningful interactions, providing a platform where students connect 
+             with instructors seamlessly. Our commitment to meeting excellence ensures that every 
+             session is engaging, informative, and fosters a collaborative learning environment. 
+             Join us in experiencing the highest standard of virtual meetings, where quality is paramount, 
+            creating an enriching educational experience for all.
           </p>
         </div>
       </div>

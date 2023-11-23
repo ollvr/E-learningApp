@@ -8,12 +8,13 @@
         <div class="col-md-6">
           <h4>Best Education</h4>
           <p>
-            Grad School is free educational HTML template with Bootstrap 4.5.2 CSS layout. Feel free
-            to use it for educational or commercial purposes. You may want to make
-            <a href="https://paypal.me/templatemo" target="_parent" rel="sponsored"
-              >a little donation</a
-            >
-            to TemplateMo. Please tell your friends about us. Thank you.
+          Discover a new standard of education with our e-learning app. 
+          We pride ourselves on delivering the finest in learning experiences,
+           combining expert-led courses with cutting-edge resources. 
+           Our commitment to excellence ensures that you receive top-notch education, 
+           equipping you with the skills to succeed in today's dynamic landscape. 
+           Join us on a journey where knowledge meets innovation, 
+           and let's redefine your learning experience together.
           </p>
         </div>
       </div>

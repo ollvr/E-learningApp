@@ -14,9 +14,10 @@
                 </div>
                 <div :class="{ 'content-hide': CourseShowed }" v-if="CourseShowed">
                   <p>
-                    Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a
-                    posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus,
-                    laoreet libero eu, vehicula libero.
+                    Dive into a world of knowledge with my free e-learning courses, 
+                    spanning diverse topics such as programming, web development, Devops,Architect Solution. 
+                    Enjoy interactive lessons and  practical exercises. 
+                  
                   </p>
                   <p class="hidden-sm">
                     Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a
@@ -37,9 +38,8 @@
                 </div>
                 <div :class="{ 'content-hide': VirtualClassShowed }" v-if="VirtualClassShowed">
                   <p>
-                    Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a
-                    posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus,
-                    laoreet libero eu, vehicula libero.
+                    Welcome to our e-learning app, where education transcends traditional boundaries 
+                    through the power of virtual classes. Seamlessly connecting learners and instructors in a digital space
                   </p>
                   <p class="hidden-sm">
                     Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a
@@ -58,9 +58,10 @@
                 </div>
                 <div :class="{ 'content-hide': realMeetingShowed }" v-if="realMeetingShowed">
                   <p>
-                    Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a
-                    posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus,
-                    laoreet libero eu, vehicula libero.
+                    In addition to our comprehensive virtual classes,
+                     we understand the significance of real meetings. Our platform seamlessly integrates live, face-to-face sessions,
+                      allowing learners to interact with instructors
+                     
                   </p>
                   <p class="hidden-sm">
                     Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a

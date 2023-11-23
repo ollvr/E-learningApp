@@ -11,14 +11,8 @@
           <li class="has-submenu">
             <a href="#section2">About Us</a>
             <ul class="sub-menu">
-              <li><router-link :to="{ name: 'Featured' }">Who we are?</router-link></li>
-              <li><router-link :to="{ name: 'commingSoon' }">What we do?</router-link></li>
+              <li><router-link :to="{ name: 'Featured' }">What we do?</router-link></li>
               <li><router-link :to="{ name: 'howItworks' }">How it works?</router-link></li>
-              <li>
-                <a href="https://templatemo.com/about" rel="sponsored" class="external"
-                  >External URL</a
-                >
-              </li>
             </ul>
           </li>
           <li><router-link :to="{ name: 'courses' }">Courses</router-link></li>

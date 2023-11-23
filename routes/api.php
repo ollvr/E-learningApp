@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\AuthenticationControllers\StudentsAuthenticationController;
 use App\Http\Controllers\AuthenticationControllers\UserAuthController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\FakeDataController;
+use App\Http\Controllers\LibraryRegistrationController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
 use App\Models\Course;
@@ -65,6 +67,17 @@ Route::middleware(['auth:sanctum'])->group(function () {
     });
 
     Route::post("/Logout",[UserAuthController::class,"Logout"]);
+});
+
+
+
+Route::controller(LibraryRegistrationController::class)->group(function(){
+    Route::post("/addToWaitList","addToWaitList");
+});
+
+
+Route::controller(ContactController::class)->group(function(){
+    Route::post("/addContactMessage","SaveContactMessage");
 });
 
 // factories route

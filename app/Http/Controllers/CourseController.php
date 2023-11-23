@@ -214,7 +214,7 @@ class CourseController extends Controller
         $correctAnsewer = 0;
         $wrongAnsewer = 0;
         foreach ($courseQuestion as $index => $question) {
-            if($request->UserAnsewers[$index] == $question->QuestionAnsewer){
+            if(strtolower($request->UserAnsewers[$index])  == strtolower($question->QuestionAnsewer)  ){
                 $correctAnsewer ++;
             }else{
                 $wrongAnsewer ++;

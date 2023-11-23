@@ -8,13 +8,12 @@
         <div class="col-md-6">
           <h4>Top Level</h4>
           <p>
-            You can modify this HTML layout by editing contents and adding more pages as
-            you needed. Since this template has options to add dropdown menus, you can put
-            many HTML pages.
-          </p>
-          <p>
-            Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec
-            interdum quam felis non ante.
+            Experience the pinnacle of education with our e-learning app. 
+            We consistently deliver top-level courses, ensuring a learning experience 
+            that exceeds expectations. Our commitment to excellence guarantees that you
+             receive the highest quality education, empowering you to excel in your pursuits. 
+             Join us on a journey where educational standards reach new heights, 
+             and let your learning aspirations thrive with our top-tier offerings.
           </p>
         </div>
       </div>

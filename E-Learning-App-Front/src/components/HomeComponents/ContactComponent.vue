@@ -13,7 +13,7 @@
 
                     Please visit https://templatemo.com/contact page -->
 
-            <form id="contact" action="" method="post">
+            <form id="contact" @submit.prevent="addContactMessage(formdata)" method="post">
               <div class="row">
                 <div class="col-md-6">
                   <fieldset>
@@ -24,6 +24,7 @@
                       id="name"
                       placeholder="Your Name"
                       required=""
+                      v-model="formdata.Nom"
                     />
                   </fieldset>
                 </div>
@@ -36,6 +37,7 @@
                       id="email"
                       placeholder="Your Email"
                       required=""
+                      v-model="formdata.email"
                     />
                   </fieldset>
                 </div>
@@ -48,6 +50,7 @@
                       id="message"
                       placeholder="Your message..."
                       required=""
+                      v-model="formdata.Message"
                     ></textarea>
                   </fieldset>
                 </div>
@@ -55,6 +58,10 @@
                   <fieldset>
                     <button type="submit" id="form-submit" class="button">Send Message Now</button>
                   </fieldset>
+                </div>
+
+                <div v-if="ContactServerMessage">
+                  <h4 style="color: red; text-align: center;"> {{ ContactServerMessage }} </h4>
                 </div>
               </div>
             </form>
@@ -77,6 +84,15 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from 'vue';
+import useContactApi from '../../Api/Contacts/ContactApi';
+const {addContactMessage,ContactServerMessage} = useContactApi()
+const formdata = ref({
+  Nom:"",
+  email:"",
+  Message:""
+})
+</script>
 
 <style lang="scss" scoped></style>
