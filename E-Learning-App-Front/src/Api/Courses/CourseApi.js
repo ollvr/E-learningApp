@@ -195,6 +195,7 @@ export default function useCourseApi() {
         }
         else{
             ValidationMsg.value = "Congragulations Test Passed Succefully ";
+            router.push({name:'studentCertif'})
         }
       })
   }

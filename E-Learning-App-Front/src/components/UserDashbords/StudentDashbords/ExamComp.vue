@@ -35,6 +35,7 @@
 import { onMounted, ref } from "vue";
 import useCourseApi from "../../../Api/Courses/CourseApi";
 import { useRoute } from "vue-router";
+
 const { getCourseQuestions, Questions, SeeCourseAnsewers,ValidationMsg } = useCourseApi();
 const router = useRoute();
 const courseId = router.params.courseId;

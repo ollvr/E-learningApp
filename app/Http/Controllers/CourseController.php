@@ -215,14 +215,11 @@ class CourseController extends Controller
                 $wrongAnsewer ++;
             }
         }
-        /*for ($i=0; $i <count($courseQuestion) ; $i++) {
-            if($courseQuestion[$i]->QuestionAnsewer == $request->UserAnsewers[$i]){
-                array_push($correctAnsewers,$request->UserAnserwers[$i]);
-            }
-            else{
-                array_push($wrongAnsewers,$request->UserAnsewers[$i]);
-            }
-        }*/
+        if($wrongAnsewer == 0){
+            StudentRegistration::where("course_id",$courseId)->where("student_id",$request->student_id)->update([
+                "certified" => "yes"
+            ]);
+        }
         return response()->json([
             "SendedAnsewers" => $request->UserAnsewers,
             "CorrectAnsewers" => $correctAnsewer,
