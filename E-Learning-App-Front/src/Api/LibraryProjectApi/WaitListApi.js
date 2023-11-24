@@ -7,7 +7,7 @@ export default function useLibraryApi(){
         axios.post("/addToWaitList",formdata).then((response)=>{
             console.log(response.data)
             addtoWaitingListMsg.value = response.data.Msg;
-        })
+        }).catch((error)=>{console.log(error)})
     }
     return {
         addToWaitList,

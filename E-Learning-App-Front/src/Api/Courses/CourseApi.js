@@ -38,7 +38,7 @@ export default function useCourseApi() {
         All_Teachers_Courses.value = response.data.PublishedTeacherCourses
       })
       .catch((error) => {
-        console.log(error)
+        console.log(error);
       })
   }
 
@@ -50,7 +50,7 @@ export default function useCourseApi() {
     }).then((response)=>{
       console.log("Server Response => ",response.data)
       courseCreatedMsg.value = response.data.msg;
-    })
+    }).catch((error)=>{ console.log(error)})
   }
   // Student Part
   // get courses registred by specific student
@@ -65,7 +65,7 @@ export default function useCourseApi() {
         StudentCourses.value = resp.data.StudentCourses
       })
       .catch((error) => {
-        return
+        console.log(error)
       })
   }
 
@@ -83,7 +83,7 @@ export default function useCourseApi() {
         certifs.value = resp.data.Certification
       })
       .catch((error) => {
-        return
+        console.log(error)
       })
   }
 
@@ -108,11 +108,11 @@ export default function useCourseApi() {
                     Authorization:`Bearer ${token}`
                 }}).then((response)=>{
                     Register_course_store.setCourseDetails(response.data.Course)
-                })
+                }).catch((error)=>{console.log(error)})
                 router.push({name:'CourseDetails',params:{courseId:course_id}})
             }
 
-        })
+        }).catch((error)=>{ console.log(error)})
 
   }
 
@@ -175,7 +175,7 @@ export default function useCourseApi() {
       .then((resp) => {
         Questions.value = resp.data.CourseQuestions
         console.log(resp.data)
-      })
+      }).catch((error)=>{console.log(error)})
   }
 
   const SeeCourseAnsewers = async (UserAnsewers,courseId,student_id) => {
@@ -201,7 +201,7 @@ export default function useCourseApi() {
             ValidationMsg.value = "Congragulations Test Passed Succefully ";
             router.push({name:'studentCertif'})
         }
-      })
+      }).catch((error)=>{console.log(error)})
   }
 
 

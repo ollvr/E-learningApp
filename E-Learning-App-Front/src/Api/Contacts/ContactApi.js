@@ -7,6 +7,8 @@ export default function useContactApi (){
         axios.post("/addContactMessage",formdata).then((resp)=>{
             console.log(resp.data)
             ContactServerMessage.value = resp.data.Msg
+        }).catch((error)=>{
+            console.log(error);
         })
     }
 

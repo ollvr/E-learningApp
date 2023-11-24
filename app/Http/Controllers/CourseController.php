@@ -218,7 +218,7 @@ class CourseController extends Controller
                 $correctAnsewer ++;
             }else{
                 $wrongAnsewer ++;
-            }
+            } 
         }
         $registred_student = StudentRegistration::where("course_id",$courseId)->where("student_id",$request->student_id)->get();
        

@@ -86,7 +86,7 @@ export default function useAuthApi() {
                   teacher_detail.setTeacher(res.data.Teacher)
                 })
                 .catch((error) => {
-                  console.log(error)
+                  console.log(error) ;
                 })
               router.push({ name: 'TeacherDashored' })
             } else if (resp.data.User.role == 'Student') {
@@ -104,8 +104,8 @@ export default function useAuthApi() {
           })
           .catch((err) => Login_Errors.value.push(err.response.data.errors))
       })
-      .catch(() => {
-        return
+      .catch((err) => {
+        console.log(err)
       })
   }
 
